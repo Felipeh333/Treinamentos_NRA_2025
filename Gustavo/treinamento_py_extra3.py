@@ -21,7 +21,7 @@ class BaseDeDados:
         del self.__dados['clientes'][id]
 
     @property  # Método getter para ver os dados da variável encapsulada
-    def ver_dados(self):
+    def dados(self):
         return self.__dados.copy()
 
 
@@ -31,4 +31,4 @@ b1.inserir_clientes(23, 'joca')
 
 b1.lista_clientes()
 
-print(b1.ver_dados)  # Acesso dos dados encapsulados
+print(b1.dados)  # Acesso dos dados encapsulados
