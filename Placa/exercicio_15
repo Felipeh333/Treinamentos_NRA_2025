@@ -1,0 +1,26 @@
+#Montando a lista com os valores inteiros:
+frase = input('Digite um valor inteiro: ').strip()
+numeros = []
+
+while(True):
+  if(frase.lower() == 'n'):
+    print('Acabou. ')
+    break
+  if(frase.isdigit()):
+    numeros.append(int(frase))
+    frase = input('Digite outro valor inteiro. Caso não queira digitar nenhum valor, digite n. ')
+  else:
+    frase = input('Valor inválido. Digite um valor inteiro ou digite n: ')
+
+#Fazendo a função para encontrar o maior valor:
+def maior(lista_qualquer):    #pode-se colocar qualquer lista na função
+  maior_valor = numeros[0]
+  for n in numeros:
+    if(n > maior_valor):
+      maior_valor = n
+    else:
+      maior_valor = maior_valor
+  print('O maior valor é ', maior_valor)
+
+#Agora, preciso chamar a função maior() para a minha lista numeros[]:
+maior(numeros)
