@@ -1,0 +1,16 @@
+
+while True:
+  linha_da_tabuada = 0
+  numero = input('Qual tabuada você gostaria de ver? (Ou digite um número negativo para sair): ').strip()
+
+  if(numero.startswith('-') and numero[1:].isdigit()):    #O startswith
+    print('Abortando o programa.')
+    break
+
+  if(numero.isdigit()):
+    while(linha_da_tabuada < 10):
+      linha_da_tabuada += 1
+      produto = int(numero) * linha_da_tabuada
+      print('{} x {} = {}'.format(numero, linha_da_tabuada, produto))
+  else:
+      print('O número digitado não é válido!')
