@@ -1,0 +1,37 @@
+#Exercício 19:
+
+#Ler os números:
+lista = []
+numero = ''
+
+while(True):
+  numero = input('Digite um número. Caso deseje parar, digite n: ')
+
+  if(numero.isnumeric()):
+    lista.append(int(numero))
+  elif(numero.lower() == 'n'):
+    break
+  else:
+    numero = input('Digite um número válido: ')
+    if(numero == 'n'):
+      break
+    elif(numero.isnumeric()):
+      lista.append(int(numero))
+
+#Criar duas listas que contenham os números pares e ímpares digitados:
+lista_pares = []
+lista_impares = []
+
+contagem_lista = 1
+
+for i in lista:
+  contagem_lista += 1
+  if(i % 2 == 0):
+    lista_pares.append(i)
+  else:
+    lista_impares.append(i)
+
+#Mostrar as três listas:
+print('Os números digitados são: ', lista)
+print('Os números pares são: ', lista_pares)
+print('Os números ímpares são:', lista_impares)
