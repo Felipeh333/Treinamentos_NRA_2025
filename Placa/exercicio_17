@@ -1,0 +1,27 @@
+#Exercício 17 do treinamento:
+#Primeiro passo: Criar um programa que gera 5 números aleatórios.
+
+#Para gerar números aleatórios, preciso importar a biblioteca random.
+
+import random
+
+#Dentro da biblioteca random, existe uma função random.randint(x, y), em que x e y são os intervalos do sorteio.
+
+numero_aleatorio_1 = random.randint(1, 5)
+numero_aleatorio_2 = random.randint(1, 5)
+numero_aleatorio_3 = random.randint(1, 5)
+numero_aleatorio_4 = random.randint(1, 5)
+numero_aleatorio_5 = random.randint(1, 5)
+
+print('Os números sorteados são: {}, {}, {}, {}, {}.'.format(numero_aleatorio_1, numero_aleatorio_2, numero_aleatorio_3, numero_aleatorio_4, numero_aleatorio_5))
+
+#Agora, colocar eles em uma tupla e mostrar a listagem de números gerados:
+
+tupla = (numero_aleatorio_1, numero_aleatorio_2, numero_aleatorio_3, numero_aleatorio_4, numero_aleatorio_5)
+print('Os números sorteados são: ', tupla)
+
+#Agora, ver os valores máximo e mínimo:
+maximo = max(tupla)
+minimo = min(tupla)
+
+print('O valor máximo é ', maximo, ' e o valor mínimo é ', minimo)
