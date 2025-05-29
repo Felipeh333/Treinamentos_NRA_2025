@@ -1,0 +1,23 @@
+reta_1 = float(input('Insira o comprimento da reta 1'))
+reta_2 = float(input('INsira o comprimento da reta 2'))
+reta_3 = float(input('INsira o comprimento da reta 3'))
+condicao_para_formar_triangulo = reta_1<reta_2+reta_3 and reta_2<reta_1+reta_3 and reta_3<reta_1+reta_2
+
+if(condicao_para_formar_triangulo and reta_1==reta_2==reta_3):
+  print('As três retas formam um triângulo equilátero.')
+
+elif(condicao_para_formar_triangulo and reta_1==reta_2 and reta_1!=reta_3):
+  print('As três retas formam um triângulo é isósceles.')
+
+elif(condicao_para_formar_triangulo and reta_3==reta_2 and reta_1!=reta_3):
+  print('As três retas formam um triângulo é isósceles.')
+
+elif(condicao_para_formar_triangulo and reta_1==reta_3 and reta_1!=reta_2):
+  print('As três retas formam um triângulo é isósceles.')
+
+elif(condicao_para_formar_triangulo and reta_1!=reta_2!=reta_3):
+  print('As três retas formam um triângulo é escaleno.')
+
+else:
+  print('As três retas não formam um triângulo.')
+
