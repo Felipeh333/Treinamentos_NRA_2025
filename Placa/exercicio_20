@@ -1,0 +1,49 @@
+#Para cada jogador, o programa vai ler o nome e quantas partidas ele jogou. Depois, vai ler a quantidade de gols feita em cada partida.
+
+lista = []
+
+while(True):
+  #Alista de gols e a biblioteca jogador precisam entrar dentro do while para que possam reiniciar a cada novo jogador!
+
+  lista_gols = []
+
+  jogador = {}   #Dicionário para cada jogador.
+
+  pergunta_nome = input('Deseja adicionar um jogador? Digite s ou n: ').strip()
+
+  if(pergunta_nome == 's'):
+    nome = input('Digite um nome: ')
+    jogador['nome'] = nome   #Salvar o nome na biblioteca.
+
+  elif(pergunta_nome != 's'):
+    break
+
+  partida = input('Ele jogou alguma partida? Digite s ou n. ').lower().strip()
+
+  if(partida == 's'):
+    quantidade_gols = int(input('Quantos gols ele fez na partida? '))
+    lista_gols.append(quantidade_gols)
+
+    while(True):
+      pergunta = input('Deseja adicionar outra partida? Digite s ou n. ')
+
+      if(pergunta == 's'):
+        quantidade_gols = int(input('Quantos gols ele fez na partida? '))
+        lista_gols.append(quantidade_gols)
+
+      else:
+        break
+
+  else:
+    print('Acabou. ')
+    break
+
+  #Adicionar todas as informações ao dicionário jogador{}:
+  jogador['partidas'] = len(lista_gols) #A quantidade de partidas é o tamanho da lista de gols.
+  jogador['gols'] = sum(lista_gols)
+
+  #Adicionando cada jogador à lista:
+
+  lista.append(jogador)
+
+print(lista)
