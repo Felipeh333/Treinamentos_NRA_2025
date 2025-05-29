@@ -1,0 +1,37 @@
+#Criar duas matrizes 3x3, preenchidas com valores aleatórios de 0 a 9.
+import numpy as np
+import random
+
+#Matriz A:
+#Primeiro passo: Sortear 9 números aleatórios:
+numeros_sorteados = [random.randint(0, 9) for _ in range(9)]   #9 números sorteados e colocados em uma lista.
+
+print('Os 9 valores sorteados para a matriz A são: ', numeros_sorteados)
+
+A = np.array(numeros_sorteados).reshape(3, 3)    #Usa-se a função reshape para organizar a matriz.
+
+print('A matriz A é dada por: ', A)
+
+#Matriz B:
+numeros_sorteados_b = [random.randint(0, 9) for _ in range(9)]
+
+print('Os 9 valores sorteados para a matriz B são: ', numeros_sorteados_b)
+
+B = np.array(numeros_sorteados_b).reshape(3, 3)
+
+print('A matriz B é dada por: ', B)
+
+#Agora, obter a matriz C:
+
+C = A + B
+print('A matriz C, obtida por A+B, é dada por: ', C)
+
+#Obtendo a matriz D:
+D = A * B
+
+print('A matriz D é dada por: ', D)
+
+#Obtendo a matriz E:
+E = A @ B
+
+print('A matriz E é dada por: ', E)
