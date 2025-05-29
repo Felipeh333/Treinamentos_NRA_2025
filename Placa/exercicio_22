@@ -1,0 +1,14 @@
+#Exercício 22:
+import numpy as np
+import matplotlib.pyplot as plt
+
+numeros_aleatorios_x = np.random.randint(0, 9, 5)   #Vai gerar 5 valores de 0 a 9.
+numeros_aleatorios_y = np.random.randint(0, 9, 5)
+
+#Agora, vou gerar um gráfico a partir desses dados:
+plt.title('Gráfico do exercício 22')
+plt.xlabel('Eixo x')
+plt.ylabel('Eixo y')
+plt.plot(numeros_aleatorios_x, numeros_aleatorios_y)
+
+plt.show()
