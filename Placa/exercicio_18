@@ -1,0 +1,21 @@
+#Exercício 18:
+
+#O primeiro passo é ler 5 valores numéricos:
+contagem_valores = 1
+lista_valores = []
+
+while(contagem_valores < 6):
+  contagem_valores += 1
+  valor_digitado = input('Digite um valor: ')
+
+  lista_valores.append(valor_digitado)
+
+#Agora, vou analisar os valores máximo e mínimo:
+maximo = max(lista_valores)
+minimo = min(lista_valores)
+
+posicao_maximo = lista_valores.index(maximo)
+posicao_minimo = lista_valores.index(minimo)
+
+print('Os valores máximo e mínimo são {} e {}.'. format(maximo, minimo))
+print('As posições dos valores máximo e mínimo são {} e {}'. format(posicao_maximo, posicao_minimo))
