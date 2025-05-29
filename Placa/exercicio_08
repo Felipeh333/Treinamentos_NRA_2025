@@ -1,0 +1,45 @@
+nomes = []
+sexos = []
+idades = []     #Listas que vão armazenar os nomes
+
+#Pessoa 1:
+nome_1 = input('Digite o nome da pessoa 1: ')
+idade_1 = int(input('Digite a idade da pessoa 1: '))
+sexo_1 = input('digite o sexo da pessoa 1: ')
+
+#Pessoa 2:
+nome_2 = input('Digite o nome da pessoa 2: ')
+idade_2 = int(input('Digite a idade da pessoa 2: '))
+sexo_2 = input('digite o sexo da pessoa 2: ')
+
+#Pessoa 3:
+nome_3 = input('Digite o nome da pessoa 3: ')
+idade_3 = int(input('Digite a idade da pessoa 3: '))
+sexo_3 = input('digite o sexo da pessoa 3: ')
+
+#Pessoa 4:
+nome_4 = input('Digite o nome da pessoa 4: ')
+idade_4 = int(input('Digite a idade da pessoa 4: '))
+sexo_4 = input('digite o sexo da pessoa 4: ')
+
+#Média de idade do grupo:
+media_idade = (idade_1 + idade_2 + idade_3 + idade_4)/4
+print('A média das idades é ', media_idade)
+
+#Armazenando os dados:
+idades.extend([idade_1, idade_2, idade_3, idade_4])   #O extend é um append quando temos que colocar várias variáveis em uma lista, de uma só vez. Tmb seria possível usar vários append.
+nomes.extend([nome_1, nome_2, nome_3, nome_4])
+sexos.extend([sexo_1, sexo_2, sexo_3, sexo_4])
+
+#Nome do homem mais velho:
+idade_mais_velho = 0
+nome_mais_velho = ''
+sexo_mais_velho = ''
+
+for x, y, z in zip(nomes, idades, sexos):  #Como há várias variáveis, colocar apenas um i não funciona.
+ if(y > idade_mais_velho and z == 'm'):
+    idade_mais_velho = y
+    nome_mais_velho = x
+
+
+print('O nome do homem mais velho é ', x)
