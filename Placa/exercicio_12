@@ -1,0 +1,18 @@
+#Nome completo:
+nome = input('Digite o seu nome completo: ').strip()
+
+#Nome com todas as letras maiúscula e minúsculas:
+print('O nome com todas as letras minúsculas é ', nome.lower())
+print('O nome com todas as letras maiúscula é ', nome.upper())
+
+#Quantas letras há ao todo (sem considerar os espaços)?
+contador_caracteres = 0
+for c in nome:
+  if(c != ' '):
+    contador_caracteres += 1
+print('A quantidade de letras no seu nome é ', contador_caracteres)
+
+#Quantas letras tem o primeiro nome?
+partes_do_nome = []
+partes_do_nome = nome.split(' ')
+print('O primeiro nome é: ', partes_do_nome[0])
