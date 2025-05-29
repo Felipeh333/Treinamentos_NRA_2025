@@ -1,0 +1,16 @@
+nome = input('Digite o seu nome: ').lower()
+
+contagem_a = nome.count('a')
+if(contagem_a > 0):
+  pos_inicial = nome.find('a') + 1
+else:
+  pos_inicial = 0
+
+if(contagem_a > 0):
+  pos_final = nome.rfind('a') + 1
+else:
+  pos_final = 0
+
+print('A quantidade de letras A no seu nome é: ', contagem_a)
+print('A posição do A inicial é: ', pos_inicial)
+print('A posição do A final é: ', pos_final)
