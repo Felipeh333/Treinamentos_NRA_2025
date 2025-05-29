@@ -1,0 +1,40 @@
+#Inicializando as listas de idade e sexo
+idade = []
+sexo = []
+
+
+while True:
+  if(input('Deseje cadastrar um dado novo (s/n)?').lower() == 'n'):
+    break
+  else:
+    idade_pergunta = input('Digite a sua idade: ')
+    sexo_pergunta = input('Digite o seu sexo (m/f): ').lower()
+
+  idade.append(int(idade_pergunta))
+  sexo.append(sexo_pergunta)
+
+
+#Analisando o número de maiores de idade na lista
+maiores_de_18_anos = 0
+
+for i in idade:
+  if(i >= 18):
+    maiores_de_18_anos += 1
+print('A quantidade de maiores de idade é: {}.'.format(maiores_de_18_anos))
+
+#Analisando o número de homens na lista
+contagem_homens = 0
+
+for i in sexo:
+  if(i == 'm'):
+    contagem_homens = contagem_homens + 1
+print('A quantidade de homens é dada por', contagem_homens)
+
+#Analisando quantas mulheres têm menos de 20 anos
+contagem_mulheres = 0
+lista_agregada = zip(sexo, idade) # O zip é usado para juntar as listas. i está em duas listas ao mesmo tempo.
+
+for i, j in lista_agregada:
+  if(i == 'f' and j < 20):
+    contagem_mulheres += 1
+print('A quantidade de mulheres menores que 20 anos é ', contagem_mulheres)
