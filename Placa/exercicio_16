@@ -1,0 +1,10 @@
+#Exercício 16:
+
+def leiaInt(mensagem):
+  entrada = input(mensagem)
+  if(entrada.isdigit()):
+    print('É um valor numérico.')
+  else:
+    print('Não é um valor numérico.')
+
+leiaInt('Digite um número')
