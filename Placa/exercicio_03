@@ -1,0 +1,11 @@
+valor = float(input('Qual é o valor da casa?'))
+salario = float(input('Qual é o seu salário?'))
+tempo = int(input('Em quantos anos você vai pagar?'))
+prestacao_mensal = valor/(tempo*12)
+condicao_aprovacao = salario*0.3 #30 por cento do salario
+
+if(prestacao_mensal < condicao_aprovacao):
+  print('O seu empréstimo foi aprovado.')
+
+else:
+  print('O seu empréstimo foi negado.')
