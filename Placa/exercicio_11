@@ -1,0 +1,26 @@
+#Como só há notas, o programa só aceita valores inteiros
+notas_de_50 = 0
+notas_de_20 = 0
+notas_de_10 = 0
+notas_de_01 = 0
+
+valor_a_ser_sacado = input('Digite o valor a ser sacado: ').strip()
+
+if(valor_a_ser_sacado.isdigit()):
+  notas_de_50 = int(valor_a_ser_sacado) // 50
+  notas_de_20 = (int(valor_a_ser_sacado) - notas_de_50 * 50) // 20
+  notas_de_10 = (int(valor_a_ser_sacado) - notas_de_50 * 50 - notas_de_20 * 20) // 10
+  notas_de_01 = (int(valor_a_ser_sacado) - notas_de_50 * 50 - notas_de_20 * 20 - notas_de_10 * 10)
+
+else:
+  print('O número digitado não é válido! Digite um valor inteiro.')
+
+print('Você receberá: ')
+if(notas_de_50 > 0):
+  print(notas_de_50, ' notas de R$50')
+if(notas_de_20 > 0):
+  print(notas_de_20, ' notas de R$20')
+if(notas_de_10 > 0):
+  print(notas_de_10, ' notas de R$10')
+if(notas_de_01 > 0):
+  print(notas_de_01, ' notas de R$1')
