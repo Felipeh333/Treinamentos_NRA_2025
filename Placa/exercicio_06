@@ -1,0 +1,14 @@
+numero = float(input('Digite um número inicial para a P.A.: '))
+quantidade = int(input('Digite quantos números a P.A. terá: '))
+razao_da_progressao_aritmetica = float(input('Digite a razão da P.A.: '))
+contador = 1
+lista_de_numeros = []
+
+print('A sua P.A. é dada por:')
+
+while(contador<=quantidade):
+  numero = numero + razao_da_progressao_aritmetica
+  lista_de_numeros.append(numero)
+  contador = contador + 1
+
+print('{}'.format(lista_de_numeros))
